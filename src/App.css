@@ -1,0 +1,685 @@
+.App {
+  text-align: center;
+  margin: auto;
+}
+
+html {
+  background-color: #282c34;
+}
+
+.mainContainer,
+.bodyContainer {
+  width: 100%;
+  min-height: 90vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #282c34;
+  color: #ffff;
+}
+
+.radarSpace {
+  width: 600px;
+  height: 600px;
+  border-radius: 12px;
+  padding: 34px;
+}
+
+.progressContainer {
+  width: 200px;
+}
+
+.page-link {
+  background-color: #282c34 !important;
+}
+
+.navLeftBarObj,
+.navLeftBarObjSelected {
+  width: 100%;
+  height: 40px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.75);
+  display: flex;
+  justify-content: left;
+  padding-left: 35px;
+  align-items: center;
+}
+
+.navLeftBarObjSelected {
+  border-right: solid 2px rgba(61, 255, 126, 1);
+  background-color: rgba(61, 255, 126, 0.1);
+}
+
+.OverviewBody {
+  width: 1200px;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 12px;
+}
+
+.OverviewBodyVertical {
+  width: 200px;
+  height: 375px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.OverviewBodyVerticalLarge {
+  width: 500px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.OverviewBodyVerticalLong {
+  width: 750px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.OverviewCardBodyLong {
+  width: 1200px;
+  height: 500px;
+  display: flex;
+  background-color: #353a45;
+  flex-direction: row;
+  border-radius: 12px;
+  padding: 12px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.OverviewBodyVerticalMedium {
+  width: 300px;
+  height: 800px;
+  top: 55%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.OverviewCardBodyMedium {
+  width: 450px;
+  height: 800px;
+  transform: translateX(75px);
+  background-color: #353a45;
+  border-radius: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.modalContainer, .modalContainerSmall {
+  width: 700px;
+  height: 600px;
+  background-color: #353a45;
+  border-radius: 12px;
+  position: fixed;
+  top: 5%;
+  z-index: 1000;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.64);
+  box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.64);
+}
+
+.modalContainerSmall {
+  width: 450px;
+  height: 300px;
+}
+
+.modalInput {
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  padding-left: 12px;
+}
+
+.exclusions {
+  color: #ee4b2b;
+}
+
+.modalInputChecker {
+  position: absolute;
+  background: #fa8072;
+  width: 300px;
+  height: 30px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  color: #800000;
+  flex-direction: row;
+  padding: 0 12px;
+  top: 49%;
+  right: 5px;
+  justify-content: space-between;
+}
+
+.modalInputChecker span {
+  color: red;
+  font-weight: bold;
+  border-left: 2px solid red;
+  padding-left: 10px;
+}
+
+.modalInputChecker p {
+  font-weight: 600;
+  margin: 0;
+}
+
+.titleModalOptionContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trafficLightsContainer {
+  width: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 30px;
+  padding-bottom: 5px;
+}
+
+.trafficLightsContainer .red {
+  background-color: #dc143c;
+  border-radius: 100%;
+  width: 21px;
+  height: 21px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trafficLightsContainer .gold {
+  background-color: #f0e68c;
+  border-radius: 100%;
+  width: 21px;
+  height: 21px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.highlightedTraffic {
+  width: 12px;
+  height: 12px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.trafficLightsContainer .green {
+  background-color: #98fb98;
+  border-radius: 100%;
+  width: 21px;
+  height: 21px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalHeaderContainer {
+  width: 100%;
+  position: relative;
+  height: 65px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 8px 20px;
+  background-color: #2d313b;
+  border-radius: 8px 8px 0px 0px;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.15);
+}
+.modalHeaderContainer h2 {
+  line-height: 1.75;
+}
+
+.modalClose {
+  color: white;
+  background: #353a45;
+  outline: none;
+  border: transparent;
+  width: 32px;
+  height: 32px;
+  margin-top: auto;
+  transition: background 0.1s linear;
+  border-radius: 12px;
+}
+
+.modalClose:hover {
+  background: #fa8072;
+}
+
+.modalClose:active {
+  background: #dc143c;
+}
+
+.modalBodyContainer {
+  width: 100%;
+  padding: 12px 5%;
+  height: 100% !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.modalBodyOptionContainer {
+  width: 100%;
+  min-width: 100px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #191919;
+}
+
+.modalBodyOptionContainerDate {
+  width: 100%;
+  min-width: 100px;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #191919;
+}
+
+.react-time-picker__wrapper {
+  background-color: white !important;
+}
+
+.modalDatePickerWrapper {
+  width:auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+  align-items: space-evenly;
+}
+
+.modalBodyOptionContainer h5, .modalBodyOptionContainerDate h5 {
+  color: white;
+  text-align: left;
+}
+
+.modalBodyOptionContainer p, .modalBodyOptionContainerDate p {
+  color: white;
+  text-align: left;
+  margin-bottom: 0px;
+  font-weight: normal;
+}
+
+.modalFooterContainer {
+  width: 100%;
+  position: relative;
+  height: 60px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 12px 5%;
+  border-top: 1.5px solid rgba(255, 255, 255, 0.15);
+}
+
+.horizontalBarChartContainer {
+  width: 450px;
+  height: 100%;
+  padding-left: 12px;
+  padding-right: 12px;
+  position: relative;
+}
+
+.DonutContainer {
+  width: 350px;
+  height: 425px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.OverviewCardLong {
+  width: 500px;
+  height: 150px;
+  background-color: #353a45;
+  border-radius: 12px;
+  padding: 12px;
+  gap: 12px;
+}
+
+.OverviewCardBody {
+  width: 500px;
+  height: 420px;
+  background-color: #353a45;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.OverviewCardBodySmall {
+  width: 200px;
+  height: 190px;
+  background-color: #353a45;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.OverviewCardBodySmallHeader,
+.OverviewCardBodyMediumHeader {
+  background-color: #2d313b;
+  width: 100%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a:hover {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+a {
+  color: white !important;
+}
+
+.navLeftBarObjHeader {
+  position: relative;
+  width: 100%;
+  transform: translateX(-50px);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.navLeftBarObj .a {
+  position: relative;
+  width: 100%;
+}
+
+.lineChartBody {
+  width: 800px;
+  height: 400px;
+}
+
+.NumbersGCAnalyticsBody {
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+
+.leftNavBody {
+  width: 100%;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  top: 12.5%;
+  text-decoration: none;
+}
+
+.leftNavBar {
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  background: #1e2126;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  color: #ffff;
+}
+
+.JobInfo {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 24px;
+}
+
+.rowFill {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+
+.dropdownAndSearching {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+}
+
+.paging {
+  width: 100px !important;
+  display: flex !important;
+}
+
+.searchingContainer {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  color: black !important;
+}
+
+.searchingContainer .category {
+  align-self: stretch !important;
+}
+
+.bodyContainer {
+  padding: 10px 25px;
+}
+
+.SortingButtons {
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+.whiteText {
+  color: #ffff;
+}
+
+a.dropdown-item {
+  color: #191919 !important;
+}
+
+.pages {
+  height: 37px;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline !important;
+  justify-content: baseline !important;
+}
+
+.NavBarContainer {
+  position: sticky;
+  width: 100%;
+  z-index: 1;
+}
+
+.homeContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.align-me {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 74px;
+}
+
+.align-me-adaptive {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  padding: 5%;
+  gap: 12px;
+}
+
+.twemoji {
+  width: 34px;
+  height: 34px;
+}
+
+.loginForm {
+  background-color: #282b34;
+  padding: 20px;
+  max-width: 500px;
+  min-width: 350px;
+  color: #ffff;
+  border: 2px solid white;
+  border-radius: 8px;
+  margin: auto;
+}
+
+.messageForm {
+  text-align: initial !important;
+  margin-top: 5em;
+}
+.messageForm h2 {
+  margin-bottom: 1em;
+}
+.messaageForm__btn {
+  text-align: center !important;
+}
+
+.alert {
+  margin-bottom: 0px !important;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.crt_notes{
+  width: 100%;
+  height: 100%;
+  display: grid !important;
+  place-items: center !important;
+}
+
+.crt_notes textarea {
+  width: 600px;
+  height: 150px;
+  border: 3px solid #cccccc;
+  padding: 5px;
+  font-family: Tahoma, sans-serif;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

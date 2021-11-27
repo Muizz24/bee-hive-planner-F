@@ -1,0 +1,265 @@
+
+
+.modalContainer, .modalContainerSmall {
+  width: 700px;
+  height: 600px;
+  background-color: #353a45;
+  border-radius: 12px;
+  position: fixed;
+  top: 5%;
+  z-index: 1000;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.64);
+  box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.64);
+}
+
+.modalContainerSmall {
+  width: 450px;
+  height: 300px;
+}
+
+.modalInput {
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  padding-left: 12px;
+}
+
+.detailsBodyMain {
+  display: flex;
+  width: 100%;
+  height: 150px;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+  text-align: left;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  gap: 0px;
+  color: white;
+}
+
+.icp_container{
+  display: flex;
+  height: auto;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.detailsBodyFooter {
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  text-align: left;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  gap: 0px;
+  color: white;
+}
+
+.detailsBodyMain p {
+  color: #C0C0C0
+}
+
+.exclusions {
+  color: #ee4b2b;
+}
+
+.modalInputChecker {
+  position: absolute;
+  background: #fa8072;
+  width: 300px;
+  height: 30px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  color: #800000;
+  flex-direction: row;
+  padding: 0 12px;
+  top: 49%;
+  right: 5px;
+  justify-content: space-between;
+}
+
+.modalInputChecker span {
+  color: red;
+  font-weight: bold;
+  border-left: 2px solid red;
+  padding-left: 10px;
+}
+
+.modalInputChecker p {
+  font-weight: 600;
+  margin: 0;
+}
+
+.titleModalOptionContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trafficLightsContainer {
+  width: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 30px;
+  padding-bottom: 5px;
+}
+
+.trafficLightsContainer .red {
+  background-color: #dc143c;
+  border-radius: 100%;
+  width: 21px;
+  height: 21px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trafficLightsContainer .gold {
+  background-color: #f0e68c;
+  border-radius: 100%;
+  width: 21px;
+  height: 21px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.highlightedTraffic {
+  width: 12px;
+  height: 12px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.modalHeaderContainer {
+  width: 100%;
+  position: relative;
+  height: 65px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 8px 24px;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.15);
+}
+.modalHeaderContainer h2 {
+  line-height: 1.75;
+}
+
+.modalClose {
+  color: white;
+  background: #353a45;
+  outline: none;
+  border: transparent;
+  width: 32px;
+  height: 32px;
+  margin-top: auto;
+  transition: background 0.1s linear;
+  border-radius: 12px;
+}
+
+.modalClose:hover {
+  background: #fa8072;
+}
+
+.modalClose:active {
+  background: #dc143c;
+}
+
+.modalBodyContainer {
+  width: 100%;
+  padding: 12px 5%;
+  height: 100% !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.modalBodyOptionContainer {
+  width: 100%;
+  min-width: 100px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #191919;
+}
+
+.modalBodyOptionContainerDate {
+  width: 100%;
+  min-width: 100px;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #191919;
+}
+
+.react-time-picker__wrapper {
+  background-color: white !important;
+}
+
+.modalDatePickerWrapper {
+  width:auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+  align-items: space-evenly;
+}
+
+.modalBodyOptionContainer h5, .modalBodyOptionContainerDate h5 {
+  color: white;
+  text-align: left;
+}
+
+.modalBodyOptionContainer p, .modalBodyOptionContainerDate p {
+  color: white;
+  text-align: left;
+  margin-bottom: 0px;
+  font-weight: normal;
+}
+
+.modalFooterContainer {
+  width: 100%;
+  position: relative;
+  height: 60px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 12px 5%;
+  border-top: 1.5px solid rgba(255, 255, 255, 0.15);
+}
+
