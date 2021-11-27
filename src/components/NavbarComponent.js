@@ -2,7 +2,7 @@ import Navbar from 'react-bootstrap/Navbar'
 import { NavDropdown } from 'react-bootstrap'
 import Nav from 'react-bootstrap/Nav'
 import Container from 'react-bootstrap/Container'
-import React, {useState} from 'react';
+import React from 'react';
 import Badge from 'react-bootstrap/Badge'
 import logoImg from './logo.PNG'
 
@@ -27,7 +27,6 @@ function NavbarComponent() {
               height="30"
               className="d-inline-block align-top"
             />{' '}
-          Bee Better
           </Navbar.Brand>
           <Navbar.Toggle/>
           <Navbar.Collapse>
