@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="mainContainer">
       <Helmet>
-        <title>MAID</title>
+        <title>Bee Better</title>
         <link rel="icon" type="image/png" href="favicon.ico" sizes="16x16" />
       </Helmet>
       <div className="NavBarContainer">
